@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-
-
+from django.db.models.signals import pre_save
 from django.shortcuts import render
 from django.contrib import messages
 from django.views.generic import ListView, DeleteView, DetailView, UpdateView, View, CreateView
@@ -46,3 +45,4 @@ class FlavorCreateView(LoginRequiredMixin, FlavorActionMixin, CreateView):
     def form_invalid(self, form):
         # Do custom logic here
         return super(FlavorCreateView, self).form_invalid(form)
+    pre_save

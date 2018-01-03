@@ -7,6 +7,8 @@ local settings of project for development
 
 from .base import *
 
+AUTH_USER_MODEL = 'products.KarmaUser'  # app_label, model_name
+
 DEBUG = True
 
 DATABASES = {
